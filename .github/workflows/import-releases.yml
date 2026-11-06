@@ -1,0 +1,23 @@
+name: Import verified MyVoice downloads
+on:
+  push:
+    branches: [main]
+    paths: ['migration/**', '.github/workflows/import-releases.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: import-myvoice-releases
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Copy published installers and verify every checksum
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node migration/import-releases.mjs

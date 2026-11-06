@@ -1,0 +1,690 @@
+{
+  "source": "mattheube/MyVoice",
+  "sourceId": 1407060645,
+  "releases": [
+    {
+      "tag": "v2.7.0-beta.14",
+      "name": "MyVoice v2.7.0-beta.14",
+      "body": "# MyVoice 2.7.0 Beta 14\r\n\r\nCette version simplifie la recherche, les profils, Studio et la publication.\r\n\r\n- Nouvelle typographie du titre et recherche centrale en forme de pilule. Entrée lance une recherche parmi les créations locales, les publications accessibles et les créateurs. Les publications privées du compte connecté sont incluses.\r\n- Profils des créateurs avec avatar ou initiale, bannière, compteurs, publications et abonnement/désabonnement. Les recherches respectent les blocages et la confidentialité.\r\n- Images transparentes affichées sans lettre dessous ; initiale uniquement en l’absence d’image. Les éditions de couverture acceptent désormais PNG.\r\n- Synchronisation des couvertures locales vers les publications liées, sans changer leur description ni leur visibilité. Récupération des liens anciens par correspondance du fichier audio.\r\n- Créations de l’auteur reconnues comme déjà ajoutées. Choix de la playlist lors d’un ajout et avertissement avant de republier une création liée.\r\n- Studio s’ouvre sur les créations. Le bouton Créer propose Voix IA, Voice Lab et l’éditeur de son. Les playlists peuvent mélanger sons et voix.\r\n- Publish & Share devient une page dédiée. Le sélecteur de sons sauvegardés reste fermé jusqu’au clic ; nom, couverture, description, catégorie et tags du son sont repris.\r\n- Champs de saisie arrondis avec focus visible. Commandes d’ajout et de suppression accessibles directement dans le mixeur ; les sources et sorties essentielles restent protégées.\r\n\r\nLes utilisateurs du canal Beta reçoivent la dernière Beta au prochain lancement complet, même en sautant des versions. Le démarrage Windows est activé par défaut à l’installation et reste désactivable. Fermer la fenêtre vers la zone de notification ne constitue pas un redémarrage.\r\n\r\nValidation : compilation .NET, tests audio/mixeur/mises à jour, tests SQL de confidentialité et blocage, tests de formats PNG/JPEG, tests de cache actualisé, et captures WPF sur profil isolé.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:3f534d19ab3d945b13ea99c71bee6c80125ca096110071e4358a2c5b28d28406",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.14/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 609,
+          "digest": "sha256:a2d7de1fb46aa85735b034ed237dcb5e1f6051780e93fd9b6be62944572dea78",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.14/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 188878543,
+          "digest": "sha256:f17023c73db798f4656a0af2c145a73d48458707558b1f575df9e452ca5ec94a",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.14/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 131336812,
+          "digest": "sha256:3ee484dfbe5bd2730400fe79d1d388c54ea09c8be9f7665d658111b88200a2d0",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.14/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.14/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.13",
+      "name": "MyVoice 2.7.0 Beta 13",
+      "body": "# MyVoice 2.7.0 Beta 13\n\nCette version corrige la fermeture depuis la zone de notification et simplifie les bibliothèques, la publication et le chargement des voix.\n\n- Barre de titre réorganisée, noms longs tronqués et boutons de fenêtre plus lisibles.\n- Tous les sons locaux consultables et recherchables dans Publish & Share. Couverture cliquable en haut de l’éditeur Studio.\n- Playlists officielles en premier ; My Playlist regroupe les créations et les sons aimés. Les données personnelles sont conservées.\n- Six effets remplacés par des enregistrements CC0 : coups à la porte, porte qui claque, vibrations de téléphone et applaudissements. Les copies d’origine sont mises à niveau sans écraser les fichiers modifiés.\n- Préparation optionnelle du moteur vocal choisi au démarrage et indicateur de chargement dans le dock. La préparation occupe de la mémoire ; elle ne lance pas la conversion du micro.\n- Mix de partage avec micro exclu par défaut et sélection des autres sources. Le routage vers le salon vocal reste distinct. Discord contrôle sa propre capture de l’écran entier : MyVoice ne peut pas imposer une exclusion à Discord.\n- Taille des publications contrôlée côté serveur : 32 Mo par défaut, autorisations augmentables jusqu’au plafond technique de 128 Mo.\n- Messages de connexion plus précis sur le site et dans l’application ; même serveur de comptes.\n- Nouvelles installations Beta configurées sur le canal Beta. Compatibilité rétablie avec les anciens manifestes stables ; les canaux existants restent respectés.\n\nMises à jour : au lancement, une version plus récente du canal sélectionné est téléchargée, vérifiée puis installée automatiquement. Une application laissée dans la zone de notification doit être quittée puis relancée. Les anciennes installations configurées sur Stable doivent choisir Beta pour recevoir les versions Beta.\n\nValidation : tests .NET audio/mixeur/migration/mises à jour, tests de sécurité SQL, tests web et limites serveur, écrans WPF sur profil isolé, et véritable moteur IA avec changement rapide/annulation des voix.\nCorrectif Beta 13 : le moteur peut aussi être préparé lorsqu’une voix IA est mémorisée mais que les effets vocaux sont désactivés. Le réglage de désactivation du préchargement reste respecté.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:97eee174e199117f56c3726711ac93578a368bb170915f672c8e82dde99ad3ec",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.13/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 609,
+          "digest": "sha256:79efd77376e21ab0113761c80db7524558827f911711805e39d133b690d09ad5",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.13/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 188801229,
+          "digest": "sha256:d006b886a8c09737295bdb6183847a5c51c84d3451c317bd740b845babb54540",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.13/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 131336784,
+          "digest": "sha256:b76c48bf1b6e6540cadb08aff963dc713018291c47c5b9b92e46863c930fae8a",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.13/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.13/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.12",
+      "name": "MyVoice 2.7.0 Beta 12",
+      "body": "# MyVoice 2.7.0 Beta 12\n\nCette version corrige la fermeture depuis la zone de notification et simplifie les bibliothèques, la publication et le chargement des voix.\n\n- Barre de titre réorganisée, noms longs tronqués et boutons de fenêtre plus lisibles.\n- Tous les sons locaux consultables et recherchables dans Publish & Share. Couverture cliquable en haut de l’éditeur Studio.\n- Playlists officielles en premier ; My Playlist regroupe les créations et les sons aimés. Les données personnelles sont conservées.\n- Six effets remplacés par des enregistrements CC0 : coups à la porte, porte qui claque, vibrations de téléphone et applaudissements. Les copies d’origine sont mises à niveau sans écraser les fichiers modifiés.\n- Préparation optionnelle du moteur vocal choisi au démarrage et indicateur de chargement dans le dock. La préparation occupe de la mémoire ; elle ne lance pas la conversion du micro.\n- Mix de partage avec micro exclu par défaut et sélection des autres sources. Le routage vers le salon vocal reste distinct. Discord contrôle sa propre capture de l’écran entier : MyVoice ne peut pas imposer une exclusion à Discord.\n- Taille des publications contrôlée côté serveur : 32 Mo par défaut, autorisations augmentables jusqu’au plafond technique de 128 Mo.\n- Messages de connexion plus précis sur le site et dans l’application ; même serveur de comptes.\n- Nouvelles installations Beta configurées sur le canal Beta. Compatibilité rétablie avec les anciens manifestes stables ; les canaux existants restent respectés.\n\nMises à jour : au lancement, une version plus récente du canal sélectionné est téléchargée, vérifiée puis installée automatiquement. Une application laissée dans la zone de notification doit être quittée puis relancée. Les anciennes installations configurées sur Stable doivent choisir Beta pour recevoir les versions Beta.\n\nValidation : tests .NET audio/mixeur/migration/mises à jour, tests de sécurité SQL, tests web et limites serveur, écrans WPF sur profil isolé, et véritable moteur IA avec changement rapide/annulation des voix.",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:5e31be9c4ee443ec61355021186cb418df64f891cdfe45929bebca2653401c11",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.12/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 609,
+          "digest": "sha256:203d7bf8e203d229c4ee08573092208913f40caac10596b184c8dedcb233ec32",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.12/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 188801110,
+          "digest": "sha256:45eaccb096dadc1d2c95a0a9f5490ffbb8c952014b4b9aa446a21b4c15662c8c",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.12/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 131323291,
+          "digest": "sha256:6eaac86c24f823cb16345780a45c4ed56010f81b8f28d28c61e8f89adeaf2596",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.12/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.12/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.11",
+      "name": "MyVoice 2.7.0 Beta 11",
+      "body": "MyVoice 2.7.0 Beta 11\n\nCette mise à jour conserve les bibliothèques et les réglages existants.\n\n- Mise à jour automatique au démarrage : recherche directe des releases GitHub complètes, tri correct des versions et vérification SHA-256.\n- Microphone : nettoyage local RNNoise Off/Léger/Équilibré/Fort, correction CPU, modèles IA épinglés et préparation/réparation automatique.\n- Discord : connexion sécurisée disponible et présence facultative, désactivée par défaut, sans nom de voix ni fichier partagé.\n- Community : images chargées à l’écran, cache limité et réessai ; bannières de profil ; disponibilité des identifiants ; édition des titres, descriptions, couvertures et aperçus. L’audio reste verrouillé après partage non privé.\n- Interface : dix thèmes, flou natif compatible Windows 11, réglages regroupés, raccourcis 1–3 touches, correction des libellés de menus et conservation des éléments personnalisés du mixeur.\n- Soundboard : quatre packs MyVoice illustrés, 37 sons originaux redistribuables, ajout sans écrasement des sons personnels.\n- Text to Voice : insertion de pauses et de niveaux d’expression réellement interprétés.\n\nValidation : 234 contrôles .NET, 62 contrôles SQL, 8 contrôles d’authentification web, essais de l’exécutable autonome, du microphone, des brouillons et des thèmes. Conversion CPU et pause TTS testées sur cette machine.\n\nLimites : le véritable pilote propriétaire My Voice attend la filière de signature Microsoft ; VB-CABLE reste utilisé. Les essais Discord avec consentement réel et sur Windows vierge restent à compléter. Les modèles ne garantissent ni une identité vocale parfaite ni une latence de 5–10 secondes dans tous les modes. Voir docs/Beta-Readiness.md.\n\nInstallation : MyVoiceSetup.exe. Les utilisateurs du canal Beta déjà équipés de la mise à jour automatique reçoivent cette version au prochain démarrage après actualisation du canal officiel.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:7ffc1a0403bce92bf05503183f459a5ca05bf6c5bacac69da0308b827dcf7666",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.11/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 609,
+          "digest": "sha256:6c6057cf6287e0dcb611c03ab9d6ae2205d4aeaa82eb7854e7a456c048c8397d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.11/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 187683663,
+          "digest": "sha256:1dbf2ad7240dc913c76c2248247bf9705aab89b92fe735ae02b84a7bd222f2f2",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.11/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 130913888,
+          "digest": "sha256:46a7ea90ca151db0a93a459e4921c347c87ad7066e3869812dc724abf78a33a0",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.11/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.11/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.9",
+      "name": "MyVoice 2.7.0 Beta 9",
+      "body": "# MyVoice 2.7.0 Beta 9\r\n\r\nStudio propose trois onglets : microphone en direct, conversion audio et génération depuis un texte avec la voix IA sélectionnée.\r\n\r\n- Conversion de fichiers ou d’enregistrements ; export, préécoute casque ou lecture vers My Voice.\r\n- Génération vocale locale en français, anglais, portugais, espagnol, allemand et italien. Le moteur de texte s’installe séparément depuis Studio ; le premier lancement télécharge ses modèles.\r\n- Imports WAV, FLAC, MP3, OGG, OPUS, M4A et AAC ; exports WAV, FLAC, MP3, OGG et OPUS.\r\n- Les nouveaux extraits restent en attente jusqu’à la confirmation de mise à jour de la voix. Originaux et anciennes références conservés.\r\n- Fermeture de publication avec Enregistrer, Jeter ou Annuler ; couverture intégrée au brouillon.\r\n- Choix français/anglais à la configuration, traductions étendues et sélecteurs stables lors du changement de langue.\r\n- Liquid Glass optionnel, adapté au thème et suspendu en arrière-plan.\r\n- Validation des fichiers déposés, résumé des imports mixtes et annulation des opérations Studio.\r\n\r\nLes trois modes vocaux existants sont conservés. Les essais CPU et GPU ont fonctionné ; le CPU peut nécessiter plusieurs dizaines de secondes. La ressemblance dépend des références et du modèle : cette version ne promet pas un clonage identique.\r\n\r\nVoix, Soundboards, brouillons et réglages existants conservés. Distribution sur le canal **Beta**.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:e00fc8f12066e28aec1032c2826c9af50ae2075de4bb91993f1aaccf65fbdbcc",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.9/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 605,
+          "digest": "sha256:16bde10ce811c100507f4b7b4b938a52f2e3da5fc3d215fc21b48870227e47c1",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.9/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 184754521,
+          "digest": "sha256:20ebf6ccee6136c185ea75c565d456403e6f20abf4a8eb5c0e7ca9e9e3172b52",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.9/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 128470083,
+          "digest": "sha256:214bc5b0ce525e656d9b67aa1af299b35683426a8f8e9aeccd165492330aefd7",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.9/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.9/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.10",
+      "name": "MyVoice 2.7.0 Beta 10",
+      "body": "MyVoice 2.7.0 Beta 10\n\n- Le logo de la barre des tâches et celui de la zone de notification suivent le thème et la couleur choisis.\n- Boutons image harmonisés : soundboards carrées, voix circulaires, titres sous les images. Le même composant est utilisé dans Community et le profil.\n- Cliquer sur une voix Community active un essai avec le moteur vocal ; les références ne sont plus lues comme un son. L'ajout à la bibliothèque ou à une collection reste une action distincte.\n- Les compteurs abonnés, abonnements et likes reçus ouvrent des listes de 50 résultats maximum, dans le respect de la confidentialité et des blocages.\n- « Amis » remplace « Abonnés acceptés ». Les publications sont regroupées dans le profil.\n- Les collections, voix, sons et réglages existants sont conservés.\n\nValidation : 215 tests applicatifs, 36 contrôles de droits et de données, vérifications des cartes et des couleurs d'icônes, essai avec le moteur IA réel. Canal Beta.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:ed85ad74b4a28460b8c6152bb916f52c60e75241276af8976171c092729c5b0d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.10/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 609,
+          "digest": "sha256:b421b2384aef0f351ec6dacd366d9b85576e9090d622ab675a79525485069f2d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.10/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 184761986,
+          "digest": "sha256:ca360ce29af77fba7af6b29aa446828e25feca8d5a40ad5e3ac02defdfcb393d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.10/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 128460043,
+          "digest": "sha256:433802b40f348a2fbdd2ddcabac1d57aafe0a60521631cdae008126ac253d40d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.10/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.10/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.8",
+      "name": "MyVoice 2.7.0-beta.8",
+      "body": "MyVoice 2.7.0-beta.8\n\nCommunity devient une page de découverte : grille Sounds / AI Voices / Voice Presets, auteur @username, badge MyVoice réservé au rôle officiel, recherche par nom/tags/description/créateur, priorité aux titres exacts et tolérance à une petite faute. Le fil exclut Private et Unlisted, y compris pour leur propriétaire. Les droits Friends Only existants restent appliqués.\n\nPréécoute Community au casque physique uniquement, sans activation de la voix ou envoi vers My Voice. Menu contextuel : Preview, Inspector, Like/Unlike, collection, bibliothèque, créateur et signalement. Les couvertures des nouvelles publications sont téléchargées depuis le stockage autorisé.\n\nPublish & Share centralise préparation, import local, brouillon et liste des publications dans une grande fenêtre interne. Les voix IA locales peuvent être empaquetées et publiées avec leur référence et leurs extraits utilisables ; les originaux exclus et les chemins du PC ne sont pas exportés. Les créations importées et les Classic Voices officielles n'ont pas d'action de republication. Les anciens packages brouillons sont archivés avant remplacement.\n\nProfile sépare Profil public et Confidentialité & compte. Nom, username, bio et avatar se modifient dans le profil public ; email, mot de passe, confidentialité, demandes d'accès, déconnexion et suppression du compte sont regroupés dans le second onglet. Les nombres d'abonnés, d'abonnements et de likes reçus viennent du serveur. Sans compte, une invitation à s'inscrire ou se connecter remplace le profil social.\n\nKeyboard Sound : cinq packs issus d'enregistrements CC0, Gateron Red, Cherry MX Blue/Clear, WhiteFox Hako Violet et IBM M2. Variations appui/relâchement, impacts enregistrés adaptés pour les grandes touches. Les sources, auteurs et traitements sont documentés dans KeyboardPacks/SOURCES.json. Un seul pack en mémoire, libéré sur OFF. Les anciennes sélections de packs retirés se replient sur Red sans changer le volume ni le routage.\n\nValidation : tests .NET et autorisations SQL, tests WPF de Community/Profile/Publish & Share et non-régression des menus/clavier. Pas de création ni de suppression d'un vrai compte pendant les tests. La fidélité perceptive des sons et la frappe physique dans une autre application restent à confirmer à l'écoute.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:37098b0a1ec8684720ec80a6a8799acbaf8d2a975f794f147965e9760780942d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.8/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 605,
+          "digest": "sha256:7dfa58bf2346818c57f35fc620fc9fbccc3abdf6b1017bf74e73e4c7b80f3d9e",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.8/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 152549771,
+          "digest": "sha256:e0a5ad5de35d766156d0ea5e7115baf8b478d36073a8f771de7c1b1de7f0f959",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.8/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 105744635,
+          "digest": "sha256:1e3d04a4a05b1ec397146ecfe2b4780a07ff1a90399adc1a83760608bb2481c7",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.8/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.8/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.7",
+      "name": "MyVoice 2.7.0-beta.7",
+      "body": "MyVoice 2.7.0-beta.7\n\nMixer : détection combinée des fenêtres utilisateur, processus configurés, applications courantes en zone de notification et sessions audio Windows. Les applications silencieuses peuvent être sélectionnées. Identités par exécutable ou application packagée, fusion des doublons, groupes OPEN NOW / SAVED APPLICATIONS, recherche, icônes légères et choix manuel d'un .exe. Les règles conservent leur routage, niveau et mute ; une source dont Capture est activée se reconnecte automatiquement après réouverture de l'application. Actualisation partagée au maximum toutes les cinq secondes, ou manuelle.\n\nKeyboard Sound : nouvelle section de Soundboard, désactivée par défaut. Dix profils originaux synthétisés, 840 samples mono 48 kHz, variations KeyDown/KeyUp et sept familles de touches. Pack actif seul en mémoire, polyphonie limitée à 32 voix, volume 0–200 %, hauteur, intensité, niveau Espace, répétition et exclusions. Un nouveau canal Mixer propose Casque, My Voice, Stream et Recording ; le casque seul est activé initialement. Raccourci Toggle Keyboard Sound configurable, sans raccourci imposé.\n\nLe détecteur global ne traduit jamais les touches en texte et ne conserve ni historique, ni mots de passe, ni phrases. Il est arrêté lorsque Keyboard Sound est désactivé. Les packs sont libérés à l'arrêt ; l'audio reste actif lorsque la fenêtre est cachée.\n\nValidation : tests de déduplication, application silencieuse démarrée/fermée, persistance, packs, polyphonie, routage casque/micro virtuel, navigation et contrôles WPF. Sons procéduraux : aucun sample récupéré d'une application tierce. La frappe physique dans Notepad et la fidélité perceptive à de vrais switches n'ont pas été validées automatiquement. Les programmes protégés ou exécutés avec des droits supérieurs peuvent rester inaccessibles à la capture Windows.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:d399781d00d9de297d3a31c064dadf805e7f64e74df902c1407600ee73c5e541",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.7/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 605,
+          "digest": "sha256:118bda7bc98d0d32e6afa1f40e8d0174ffbd378d198709b9e048b5069a9f63ac",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.7/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 159034127,
+          "digest": "sha256:f9b25e8a7210540710b20548f0a220808c1a870c397be121935a0a6fcc1ef55d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.7/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 109975531,
+          "digest": "sha256:b69692de4ea65022f596e341d4d887be9af513678c1c3b83999eb890d47e4b59",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.7/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.7/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.6",
+      "name": "MyVoice 2.7.0 Beta 6",
+      "body": "MyVoice 2.7.0-beta.6\n\nCorrection des menus clic droit : suppression de la colonne blanche du template Windows, icônes vectorielles de taille fixe, sous-menus lisibles, couleurs du thème et actions de retrait distinctes. Les commandes existantes sont conservées.\n\nRessources : pages créées à la demande, cache de pages avec expiration, lectures de durée audio différées, listes de voix virtualisées et cache LRU de miniatures limité à 64 Mo. Les décodages en attente sont annulés quand la carte disparaît. Les champs de profil non envoyés restent conservés.\n\nArrière-plan : les animations GIF, waveforms et rafraîchissements visuels inutiles sont suspendus. Le microphone, le mixeur, les raccourcis, les sons et le moteur IA actif continuent. Aucun modèle actif n'est déchargé et aucun GC forcé n'est ajouté.\n\nTransport audio IA : suppression de deux tableaux temporaires par échange et réutilisation du tampon d'entrée Conversation. Le test ciblé mesure 35 % d'allocations en moins pour l'encodage/décodage float32, avec un signal identique bit pour bit. Cela ne signifie pas 35 % de RAM totale en moins.\n\nValidation : 200 tests C#, navigation WPF, 600 sons et 600 voix, cache borné, formulaires conservés, menus rendus dans trois thèmes et quatre échelles (100/125/150/200 %). Le rapport mémoire donne les mesures brutes et leurs limites ; la mémoire totale reste dominée par les modèles IA. Le passage physique entre écrans DPI différents n'a pas été testé.\r\n\nAudio en arrière-plan : essai final de trois minutes réussi sans perte, latence mesurée environ 1,25 s jusqu'à la soumission virtuelle. Un essai précédent a écarté un bloc ; la stabilité sous charge reste dépendante de la machine et du modèle. Le rapport conserve ces résultats.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:7a4011c5b3ced0ab5892935a4dbb3221114d6fd6348eee5bd830547ff521ab28",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.6/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 605,
+          "digest": "sha256:469d641ae9cbf1580b90f4b4bf42348022a0d6bd17efb3cbc0b29c11a89d1ddc",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.6/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 148093645,
+          "digest": "sha256:16833b2f35c58f76b42b9813117e3923fa23178cef811151b4ab1157b2edfb35",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.6/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 102495426,
+          "digest": "sha256:c2cd3363cbee4dcf0f823605a9049c1dfafa9726091987464f3aa5ba6e281b35",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.6/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.6/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.5",
+      "name": "MyVoice 2.7.0 Beta 5",
+      "body": "MyVoice 2.7.0-beta.5\n\nLe démarrage du moteur vérifie maintenant Python, ses dépendances et le backend. S'ils manquent, MyVoice lance la réparation dans son environnement géré avant d'initialiser le modèle. Le bouton Installer / réparer utilise le même parcours. L'annulation arrête la réparation sans effacer les voix ni les modèles.\n\nCorrection du chemin de modules Windows PowerShell lors du lancement depuis l'application. Les archives uv et backend téléchargées sont vérifiées par SHA-256. Un environnement incomplet est sauvegardé avant reconstruction.\n\nValidation : installation isolée depuis un dossier sans Python, auto-test VAD sur 50 trames silencieuses, deuxième démarrage sans réinstallation et modèle témoin préservé ; 197 tests C# ; compilation sans avertissement. Cela ne remplace pas une validation sur un PC Windows vierge ni une mesure de qualité des modèles.\n\nLes améliorations Beta 4 du mixeur, de VB-CABLE, des menus et de Publish & Share restent incluses. Le prompt complet reste en cours : tableau de santé détaillé, pad XY, sessions et avatars en ligne, modèles IA partageables sans références brutes et pilote My Voice notamment ne sont pas terminés.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:c8675eb8e9f62c0397976c0a2e0ae690eddcf412a249b1abce28937e7ac16e5d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.5/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 605,
+          "digest": "sha256:204c43489bef11360e69a125cff79ba2ff4fac3204ef8317b6a062ecb9a2c19e",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.5/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 148081118,
+          "digest": "sha256:122dec624c92a89f0f835758446830cc90fa4a2b8218e5dd4ea297f541fdf357",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.5/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 102491278,
+          "digest": "sha256:4c20342a20cd05c17ec77b5587beecac882784732f77dededda51989c7978558",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.5/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.5/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.4",
+      "name": "MyVoice 2.7.0 Beta 4",
+      "body": "MyVoice 2.7.0-beta.4\n\nConversation : réparation indépendante de WebRTC VAD dans le runtime contrôlé, vérification du silence avant chargement, détails des erreurs et correction du résultat de benchmark non sérialisable. Test réel de trois minutes sans perte audio dans un profil isolé.\n\nMixer : Mono, Solo limité au monitoring, exclusion persistante « Jamais vers le micro virtuel » prioritaire sur les routes, politique des nouvelles applications (Monitor only par défaut). Les règles existantes restent conservées. La capture d'une application est une copie : désactiver son Monitor si Windows l'écoute déjà pour éviter un doublage.\n\nVB-CABLE : reconnaissance du périphérique réénuméré/localisé Haut-parleurs (2- VB-Audio Virtual Cable), sans sélectionner la sortie 16 canaux.\n\nCommunity : connexion au serveur MyVoice, confirmation de sauvegarde du profil uniquement lorsque le serveur renvoie la ligne modifiée. Publish & Share devient une page dédiée ; accès depuis les sons et presets locaux possédés.\n\nInterface : menus contextuels sans gouttière Windows blanche, accueil et logo accordés au thème, transition 180 ms, séparation des commandes du haut. Recherche des mises à jour à chaque démarrage, canal Stable/Beta conservé.\n\nValidation : compilation sans avertissement ; 197 tests C# ; 22 tests SQL ; tests Python de protocole/VAD ; dix pages WPF et tests dropdown/brouillons/bibliothèque. Les données personnelles restent hors du dossier programme.\n\nLe master n'est pas intégralement terminé : moteur complètement absent/installation sur PC vierge, health dashboard complet, fallback Requested/Active, pad XY, annulation d'écho, audio réseau, macros, publication de modèles IA sans références brutes, sessions/avatars en ligne et pilote Windows propriétaire My Voice restent à développer ou valider. La réception réelle des emails Auth n'est pas validée. ASIO/MIDI nécessitent du matériel compatible. VB-CABLE reste le périphérique virtuel utilisé ; aucun faux renommage.\n\nAjouts Beta 4 : réglages temporels gate/compression et gain Makeup par canal, égaliseur paramétrique trois bandes par sortie (fréquence/gain/Q), icônes contextuelles distinctes. Tests du gain réel et de l’atténuation fréquentielle indépendante par bus.\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:bf81acf03fe46d46edc98b63b0787713016fb6b4a135e2f5bf3330cbe5049734",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.4/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 605,
+          "digest": "sha256:a32dac9e4e8c77e61a81f0bfac5334905e31aa80899959b83dc669c7f476e92a",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.4/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 148080063,
+          "digest": "sha256:3eb5177b51bbe5829a8c6f525b504264912bce3df230a9dc296196a2cca7cdba",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.4/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 102479384,
+          "digest": "sha256:95de660ee7ac678f4266a43bb4c45406725a959ca7586dc3148b6a0102805f88",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.4/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.4/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.3",
+      "name": "MyVoice 2.7.0 Beta 3",
+      "body": "MyVoice 2.7.0-beta.3\n\nConversation : réparation indépendante de WebRTC VAD dans le runtime contrôlé, vérification du silence avant chargement, détails des erreurs et correction du résultat de benchmark non sérialisable. Test réel de trois minutes sans perte audio dans un profil isolé.\n\nMixer : Mono, Solo limité au monitoring, exclusion persistante « Jamais vers le micro virtuel » prioritaire sur les routes, politique des nouvelles applications (Monitor only par défaut). Les règles existantes restent conservées. La capture d'une application est une copie : désactiver son Monitor si Windows l'écoute déjà pour éviter un doublage.\n\nVB-CABLE : reconnaissance du périphérique réénuméré/localisé Haut-parleurs (2- VB-Audio Virtual Cable), sans sélectionner la sortie 16 canaux.\n\nCommunity : connexion au serveur MyVoice, confirmation de sauvegarde du profil uniquement lorsque le serveur renvoie la ligne modifiée. Publish & Share devient une page dédiée ; accès depuis les sons et presets locaux possédés.\n\nInterface : menus contextuels sans gouttière Windows blanche, accueil et logo accordés au thème, transition 180 ms, séparation des commandes du haut. Recherche des mises à jour à chaque démarrage, canal Stable/Beta conservé.\n\nValidation : compilation sans avertissement ; 192 tests C# ; 22 tests SQL ; tests Python de protocole/VAD ; dix pages WPF et tests dropdown/brouillons/bibliothèque. Les données personnelles restent hors du dossier programme.\n\nLe master n'est pas intégralement terminé : moteur complètement absent/installation sur PC vierge, health dashboard complet, fallback Requested/Active, réglages temporels gate/compression, EQ paramétrique de sortie, pad XY, annulation d'écho, audio réseau, macros, publication de modèles IA sans références brutes, sessions/avatars en ligne et pilote Windows propriétaire My Voice restent à développer ou valider. La réception réelle des emails Auth n'est pas validée. ASIO/MIDI nécessitent du matériel compatible. VB-CABLE reste le périphérique virtuel utilisé ; aucun faux renommage.\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:18bf02e213698e84af38a59c8ceee33475bcf19e5cbeec8dbda8482f3ee7f134",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.3/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 605,
+          "digest": "sha256:f9444ef2bdaf15372341d289bf81a0a23d9e7539160c803bad522abbffecc7bc",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.3/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 148076174,
+          "digest": "sha256:d0906f3ae930523c01bd239170b263d6d36c1d862e5464599de636cc28e9cf5d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.3/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 102473275,
+          "digest": "sha256:36229a27bcddc813a8fd1bffc4a2520deff30b82c22ebd0991f52661c18beeb0",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.3/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.3/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.7.0-beta.2",
+      "name": "MyVoice v2.7.0-beta.2",
+      "body": "# MyVoice 2.7.0 Beta 2\r\n\r\nCorrections du routage VB-CABLE et des menus du mixeur, nouveau Soundboard et préparation des publications.\r\n\r\n- Bouton Rétablir VB-CABLE : restaure les routes micro/sons et affiche le périphérique à sélectionner dans les autres applications.\r\n- Menus déroulants : sélection conservée pendant un rafraîchissement ; la molette ne change plus un périphérique au passage.\r\n- Cartes de sons jouables, menu contextuel, préécoute casque isolée du micro virtuel, collections mixtes et favoris indépendants.\r\n- Éditeur de sons : découpage, fondus, normalisation, description, catégorie et tags ; fichier original conservé.\r\n- GIF et WebP, recadrage animé, chargement différé et cache borné. Limites : 20 Mo, 16 mégapixels et 120 images par animation.\r\n- Recherche Ctrl+K, historique des notifications, accès compte/aide/Discord, nouveaux formulaires français et anglais.\r\n- Brouillon de publication persistant ; provenance conservée dans les packages. Backend préparé avec contrôles d’accès et détection des fichiers audio identiques appartenant à un autre compte.\r\n- Chargement des voix sérialisé : un choix obsolète ne doit plus remplacer la dernière voix demandée. Aucun nouveau modèle IA ajouté.\r\n- Mises à jour automatiques officielles conservées, avec sauvegarde et retour à l’ancienne version en cas d’échec.\r\n\r\nCommunity et les comptes en ligne restent indisponibles sans projet Supabase connecté. Les formulaires permettent de préparer le profil et les brouillons sur le PC. Les contrôles de propriété par empreinte ne détectent pas un audio réencodé ou modifié.\r\n\r\nCette Beta livre les corrections et les phases décrites dans docs/Master-Progress.txt ; elle ne prétend pas terminer tous les points du master prompt. Les éléments encore partiels figurent dans docs/Master-Audit.txt.\r\n\r\nTests locaux : routage CABLE Input → CABLE Output réel, préécoute isolée, conservation des originaux, collections, menus ouverts pendant rafraîchissement, images GIF/WebP, 600 cartes supplémentaires et lancement des neuf pages. 187 tests C# et 22 tests serveur passent. Démarrage du moteur NVIDIA et changements rapides de voix validés avec le moteur réel. Paquet GitHub vérifié et lancé. Mise à jour réelle 2.6 → 2.7 Beta 2 réussie : téléchargement, remplacement, relance, confirmation de santé et sauvegarde conservée.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:202968afcf4baecf79a242417a5fbb29dbfbdc328d4994be8f71453e03f37784",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.2/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 605,
+          "digest": "sha256:8af1d0b9b84c7164d0688fc1b976631292abcfd8a90989fde7f6ee5e56ccae7a",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.2/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.7.0-win-x64.zip",
+          "size": 148068151,
+          "digest": "sha256:f3fe11045753f14d845d283e30b67696bd108db4a97deac63af487169ad4b9ff",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.2/MyVoice-2.7.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 102475680,
+          "digest": "sha256:28239b6f4b243750c3d4851abb1a09fe9770e0608bc170523cec6eabd09c55b0",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.2/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0-beta.2/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.6.0-beta.1",
+      "name": "MyVoice v2.6.0-beta.1",
+      "body": "# MyVoice 2.6.0 Beta 1\r\n\r\nCette version ajoute l’installation automatique des mises à jour officielles au démarrage, suivie du redémarrage de MyVoice. Le canal Stable/Beta reste réglable. La stable 2.2.0 reste le téléchargement par défaut.\r\n\r\n- Téléchargement avec progression réelle et vérification SHA-256 du paquet officiel.\r\n- Programme séparé pour préparer et remplacer les fichiers après la fermeture de MyVoice.\r\n- Sauvegarde de l’ancienne version ; restauration et relance si la nouvelle application ne confirme pas son démarrage.\r\n- Refus des archives incomplètes, des liens et chemins sortant du dossier prévu ; verrou contre deux installations simultanées.\r\n- Échec réseau récupérable et nouvelle tentative manuelle dans les réglages.\r\n- Réglages, sons, voix et moteur IA conservés dans leurs dossiers actuels.\r\n\r\n**Une première installation de cette 2.6 est nécessaire depuis les versions précédentes**, qui ne possèdent pas le nouveau composant. Ensuite, les futures mises à jour compatibles s’installent au démarrage lorsque les options de recherche et d’installation automatique sont activées.\r\n\r\nValidation : 177 tests C# réussis avant publication. Le programme conserve les sauvegardes et journaux pour diagnostic. Voir [fonctionnement et limites](https://github.com/mattheube/MyVoice/blob/v2.6.0-beta.1/docs/Automatic-Updates.md).\r\n\r\nLes binaires ne sont pas encore signés Windows. Les dossiers protégés peuvent nécessiter une installation manuelle. Une coupure de courant peut nécessiter une restauration manuelle depuis la sauvegarde. Community reste hors ligne sans projet Supabase connecté. Les moteurs IA et le routage VB-CABLE de 2.5 sont conservés.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:09ba7a132a60076b3f52a458120574e24f2d26c52a27fadbe2aef3db459d508f",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.6.0-beta.1/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 605,
+          "digest": "sha256:300fa73dba0c654b653530486914474f3541f5968614f1f5353ff3d5f221d548",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.6.0-beta.1/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.6.0-win-x64.zip",
+          "size": 142362036,
+          "digest": "sha256:424bbc5faaf7eeddde0e5ca35645845130fdbfa683fb1231fbc5cb94237ebac6",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.6.0-beta.1/MyVoice-2.6.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 98533710,
+          "digest": "sha256:64434d0001dc5080bc8d97bfc3b14d16bae14d241f3d111894edf776a7b8f13d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.6.0-beta.1/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.6.0-beta.1/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.5.0-beta.1",
+      "name": "MyVoice v2.5.0-beta.1",
+      "body": "# MyVoice 2.5.0 Beta 1\r\n\r\nCette bêta corrige le routage du microphone virtuel et améliore le démarrage et l’interface Windows. La stable 2.2.0 reste le téléchargement par défaut.\r\n\r\n- Virtual Microphone : détection automatique de la paire VB-CABLE standard, réparation d’une ancienne sortie vers les haut-parleurs, reconnexion et diagnostics. Le bus virtuel est géré par MyVoice ; aucun périphérique physique n’est choisi à sa place. Le statut connecté dépend de la sortie réellement ouverte.\r\n- Démarrage : logo vectoriel, thème conservé, spinner et progression réelle du téléchargement, vérification d’intégrité, possibilité de continuer avec la version actuelle, récupération après échec. L’IA se prépare en arrière-plan.\r\n- Fenêtre : maximisation dans la zone de travail Windows, F11 et Échap, restauration de la taille et de l’état précédents, boutons redessinés.\r\n- Mixer : défilement à la molette dans les zones horizontales, événements horizontaux Windows, menus déroulants et contrôles accordés au thème.\r\n- Mic Setup : sections Input, Cleanup, Tone, Dynamics, Monitoring et Advanced ; six préréglages réels, aide et remise à zéro par section.\r\n- Apparence : six thèmes, accents dérivés, densité Compact/Comfortable, icônes de navigation vectorielles cohérentes, tooltips, sliders et boutons thématisés.\r\n\r\nLes sons, voix, modèles, comptes locaux, raccourcis et réglages restent hors du dossier programme. Une sauvegarde de version précède le chargement de la bibliothèque. Les algorithmes IA sont conservés.\r\n\r\n## Vérification\r\n\r\n156 tests C# ; neuf pages WPF avec copie isolée des réglages ; limites physiques de fenêtre maximisée et plein écran ; retour à la taille précédente ; préréglages réels ; sauvegarde du thème et de la densité. La paire VB-CABLE est testée sur Windows avec un signal synthétique.\r\n\r\n## Limites explicites\r\n\r\n- Les mises à jour sont recherchées, téléchargées et vérifiées depuis les releases officielles. **L’installation reste manuelle** ; remplacement automatique et rollback ne sont pas livrés.\r\n- Le driver MyVoice propriétaire n’est pas développé. L’interface IVirtualAudioBackend prépare son intégration ; seul VB-CABLE standard est actuellement pris en charge automatiquement. VB-CABLE doit être installé depuis son site officiel.\r\n- Les transitions entre écrans de DPI différents et le touchpad physique nécessitent encore une validation matérielle. Les notes de version s’ouvrent sur GitHub.\r\n- Pas de Mica, annulation d’écho acoustique ou de-esser ajouté. ASIO et MIDI n’ont pas de nouveau test matériel. Community reste hors ligne sans projet Supabase connecté. L’installateur n’est pas signé.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:42a4f0365ace3aad6126f8e74a2e32ee5bff01b21359338b4af05b51a57fd538",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.5.0-beta.1/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 402,
+          "digest": "sha256:5666c6fa8e9ccf92c9b12fef693ece70c02556e71114f2beaae387793980b1ec",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.5.0-beta.1/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.5.0-win-x64.zip",
+          "size": 77132257,
+          "digest": "sha256:30ab81245d27756fbb0b4ced8c4587b0ed65e2a7748dca717b12b8fe8fbdaf46",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.5.0-beta.1/MyVoice-2.5.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 54223415,
+          "digest": "sha256:79e1189baa3786d87f901b76ec6cdb8be1f84af11ffd24c445948c432607f419",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.5.0-beta.1/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.5.0-beta.1/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.4.0-beta.1",
+      "name": "MyVoice v2.4.0-beta.1",
+      "body": "# MyVoice 2.4.0 Beta 1\r\n\r\nCette Beta ajoute un Mixer à l’application Windows. La version stable 2.2.0 reste le téléchargement par défaut.\r\n\r\n- Mixer distinct de Mic Setup : sources physiques/virtuelles, applications Windows et audio système ; les nouvelles sources sont ajoutées à l’arrêt avec une commande Capture explicite.\r\n- Volumes numériques, mute/solo, balance, EQ, filtre, compression, delay/reverb, niveaux peak/RMS et matrice vers Headphones, Virtual Mic, Stream, Recording et Master.\r\n- Sorties WASAPI et MME ; ASIO proposé si un driver est installé. Limiteur sur chaque bus, détection des boucles et conservation des périphériques indisponibles.\r\n- Enregistrement WAV 48 kHz stéréo float32, avec choix du fichier avant démarrage et écriture sur un worker dédié.\r\n- Profils locaux : sauvegarde, chargement, duplication, renommage, suppression, import/export sans identifiants matériels. Raccourcis et MIDI Learn pour niveaux, mute/solo et profils.\r\n- Nouveau symbole et wordmark MyVoice, icônes Windows à neuf tailles et variante tray. Le site officiel utilise cette identité.\r\n- Recherche des périphériques en arrière-plan et correction du défilement horizontal des tranches.\r\n\r\nLes voix, sons, références et réglages existants restent locaux. Le fichier Mixer est additif et récupère les anciens réglages de monitoring. Les moteurs IA Direct, Conversation et Expressive conservent leurs algorithmes.\r\n\r\nValidation locale : 145 contrôles C#, capture Windows isolant deux applications, capture système, retour de périphérique, véritable trajet CABLE Input → CABLE Output et neuf pages WPF. Les profils, volumes, recadrages, raccourcis, zone de notification et persistance ont aussi été exercés dans une copie du profil utilisateur.\r\n\r\n## Limites\r\n\r\n- ASIO et contrôleur MIDI physique n’ont pas été testés sur matériel dédié. La file MIDI est testée avec des événements synthétiques.\r\n- WAV uniquement ; arrêt explicite avant la limite RIFF de 4 Go. Pas d’annulation d’écho acoustique ni de WDM/KS dans cette Beta. Les entrées restent en WASAPI ; le choix MME/ASIO concerne les sorties.\r\n- Capture par application : Windows build 20348 ou supérieur. Une application inactive reste indisponible jusqu’à sa reprise audio.\r\n- L’estimation de tampon n’est pas une mesure de latence de bout en bout ; le matériel, les modèles IA et le réseau ajoutent leur délai.\r\n- Community reste hors ligne tant qu’un projet Supabase n’est pas connecté.\r\n- Les mises à jour officielles sont recherchées et téléchargées avec vérification d’intégrité. Leur installation reste manuelle. L’installateur n’est pas signé ; VB-CABLE s’installe depuis son site officiel.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:3237257f14f18bc8f6b3bd1a7eda76071445cd3467b00a71d1635739cea4c375",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.4.0-beta.1/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 402,
+          "digest": "sha256:19c3a977057ac42b5dbad51c7f3fb4fbcf1d5d1256b0544cc6d46d965a102530",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.4.0-beta.1/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.4.0-win-x64.zip",
+          "size": 77119069,
+          "digest": "sha256:982be9d1f33d253d620ee8062706860c1b7844e9e68cbb89e5bfa1946b45d25d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.4.0-beta.1/MyVoice-2.4.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 54203311,
+          "digest": "sha256:7d4b1cc986f17fb45c4fd6c201f167b47246229048ae015226fb6f9bc5b0ac11",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.4.0-beta.1/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.4.0-beta.1/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.3.0-beta.1",
+      "name": "MyVoice v2.3.0-beta.1",
+      "body": "# MyVoice 2.3.0 Beta 1\r\n\r\nPremière Beta de la nouvelle interface. La version stable 2.2.0 reste le téléchargement par défaut.\r\n\r\n- Nouvelle identité MV, fenêtre et dock repensés ; navigation Home, Voice, Soundboard, Community, Studio, Mic Setup, Profile et Settings.\r\n- Quatre thèmes, accent personnalisable, mouvements réduits et zoom jusqu’à 150 %.\r\n- Voice Designer : pitch, égalisation, saturation, écho et mélange ; presets locaux exportables.\r\n- Favoris Soundboard, import/export de packages vérifiés et profil local avec avatar recadré.\r\n- Mic Setup regroupe les périphériques et le traitement audio, avec aides et réinitialisations ciblées.\r\n- Canal Beta volontaire, source officielle fixe, téléchargement vérifié et conservation des bibliothèques existantes.\r\n- Site officiel GitHub Pages et backend communautaire préparé avec tests de permissions.\r\n\r\nLes moteurs IA Direct, Conversation et Expressive sont conservés : cette Beta ne modifie pas leurs algorithmes. Les anciennes voix, références, sons et paramètres restent locaux. La migration ajoute un fichier de préférences et sauvegarde les métadonnées existantes.\r\n\r\nValidation : 115 contrôles C#, 19 scénarios SQL locaux, huit pages Windows rendues, recadrage rond/carré, réglages persistants, raccourcis et zone de notification. Site vérifié sur formats ordinateur et mobile. Les tests SQL ne remplacent pas un essai sur un projet Supabase réel.\r\n\r\n## Limites de cette Beta\r\n\r\n- **Comptes et Community non activés** : aucun projet Supabase n’est encore connecté. L’audio local fonctionne sans ce service. Le backend et sa procédure de déploiement sont dans le dépôt.\r\n- L’installation des mises à jour reste **manuelle** après téléchargement vérifié. L’application ne se remplace pas et ne se relance pas automatiquement.\r\n- Les packages partagent Soundboards et Voice Presets. Les voix IA dépendant de références privées ne sont pas exportées automatiquement.\r\n- Modération complète, suppression de compte, édition des publications et aperçu audio communautaire restent à compléter avant ouverture générale.\r\n- Installateur non signé sous Windows ; VB-CABLE reste une installation depuis son site officiel si nécessaire. La désinstallation conserve les données utilisateur.\r\n\r\nLes sauvegardes existantes doivent être conservées pendant l’essai. Merci de signaler les problèmes reproductibles avec la version et les étapes concernées, sans joindre vos enregistrements privés.\r\n",
+      "prerelease": true,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:af23ebea550f02a72d1c23f4b03e396069828432a8b67c646aa0604aadc8953e",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.3.0-beta.1/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 402,
+          "digest": "sha256:4edb447aabae8e7d0e3cc61b90eac8e073859691801051f5f5aadc8ab3055e0e",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.3.0-beta.1/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.3.0-win-x64.zip",
+          "size": 76987704,
+          "digest": "sha256:e94b77ca890cfda2d3c5a11144ab6ac723cc87475f0dc3376a345d6fd236f874",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.3.0-beta.1/MyVoice-2.3.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 54118701,
+          "digest": "sha256:0cde1da0039540e0977b683a3a5def4e6308708bed3934950ecf59f8f02f3b5d",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.3.0-beta.1/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.3.0-beta.1/soundpacks.json"
+        }
+      ]
+    },
+    {
+      "tag": "v2.2.0",
+      "name": "MyVoice v2.2.0",
+      "body": "# MyVoice 2.2.0\r\n\r\n- Ajout de Conversation : timbre V2 en continu, contexte roulant, VAD, crossfade, anticipation et benchmark par voix. Direct et Expressive restent disponibles.\r\n- Comparateur local : même phrase convertie dans les trois modes, avec écoute séparée.\r\n- Mesures développeur : calcul, file, RTF, recouvrement, données écartées et temps capture → soumission à la sortie virtuelle.\r\n- GitHub Releases préconfiguré, téléchargement HTTPS vérifié par SHA-256, cache de version et démarrage hors ligne.\r\n- Voix, sons, raccourcis et paramètres restent locaux ; sauvegarde par version.\r\n\r\nValidation locale : 87 contrôles déterministes, trois minutes de Conversation vers le câble virtuel sans perte ni retard cumulatif ; environ 1,26–1,33 s jusqu’à WASAPI sur RTX 4060 Ti. Discord et le réseau ne sont pas inclus ; la similarité perceptive n'est pas garantie.\r\n\r\nL'installation automatique n'est pas livrée : le téléchargement vérifié s'ouvre dans son dossier pour installation manuelle. Pas de navigateur de packs dans cette version. Les binaires ne sont pas encore signés sous Windows.\r\n",
+      "prerelease": false,
+      "assets": [
+        {
+          "name": "checksums.txt",
+          "size": 341,
+          "digest": "sha256:5f756cf36e481ff045d9f8e00e7709d1644e9bfd3674e25889cfe119e011602b",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.2.0/checksums.txt"
+        },
+        {
+          "name": "manifest.json",
+          "size": 363,
+          "digest": "sha256:70331899671437e9a281c2ee0e2cec6acfba9c9819001fb5a235002df9ab57ef",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.2.0/manifest.json"
+        },
+        {
+          "name": "MyVoice-2.2.0-win-x64.zip",
+          "size": 76882875,
+          "digest": "sha256:9c1b1d69ff2e51388bdaaadaf5df28f5d67cd15dc280a8c6310ed5a2ab7415ec",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.2.0/MyVoice-2.2.0-win-x64.zip"
+        },
+        {
+          "name": "MyVoiceSetup.exe",
+          "size": 54028152,
+          "digest": "sha256:cc3a514a5697db56f7671013a155197943612312b8ea882afb28e065ad28e0e2",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.2.0/MyVoiceSetup.exe"
+        },
+        {
+          "name": "soundpacks.json",
+          "size": 32,
+          "digest": "sha256:4e040d197932c4d81d11ddb10088c87a7f55ed0b40f25e288c69b6ca1f5082b8",
+          "url": "https://github.com/mattheube/MyVoice/releases/download/v2.2.0/soundpacks.json"
+        }
+      ]
+    }
+  ]
+}
