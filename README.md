@@ -1,7 +1,10 @@
 # My Projects
 
-Site et téléchargements publics de MyVoice et MyChat.
+Les applications de Mattheube.
 
-Les sources des applications sont gérées séparément dans un dépôt privé. Les composants tiers conservent leurs licences respectives.
+- **MyVoice** — studio audio et transformation vocale sur Windows.
+- **MyChat** — personnages et conversations IA, en développement.
 
-[Discord](https://discord.gg/SDhAJgvxzq)
+[Découvrir les projets](https://mattheube.github.io/MyProjects/) · [Rejoindre Discord](https://discord.gg/SDhAJgvxzq)
+
+Les notices et licences des composants tiers accompagnent les applications.
