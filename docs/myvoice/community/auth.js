@@ -21,7 +21,7 @@ export async function refreshSession(config,storage,request=fetch){
 }
 export async function startDiscord(config,storage,request=fetch){
  const settings=await request(config.url+'/auth/v1/settings',{headers:{apikey:config.publishableKey},signal:AbortSignal.timeout(10000)});
- if(!settings.ok||!(await settings.json()).external?.discord)throw Error('La connexion Discord n’est pas encore activée sur le serveur MyVoice.');
+ if(!settings.ok||!(await settings.json()).external?.discord)throw Error('La connexion Discord n’est pas encore activée sur le serveur My Projects.');
  const pkce=await createPkce();storage.setItem(verifierKey,JSON.stringify({verifier:pkce.verifier,created:Date.now()}));
  const query=new URLSearchParams({provider:'discord',redirect_to:'https://mattheube.github.io/MyProjects/myvoice/community/',code_challenge:pkce.challenge,code_challenge_method:'s256'});
  return config.url+'/auth/v1/authorize?'+query;
