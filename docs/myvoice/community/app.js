@@ -3,8 +3,8 @@ import {serviceError} from './service-errors.js';
 const authCallback=captureAuthCallback(location,history);
 const root=document.querySelector('main');
 const repo='https://github.com/mattheube/MyProjects';
-const download=repo+'/releases/latest/download/MyVoiceSetup.exe';
-let betaTag='v2.7.0-beta.17';
+const download=repo+'/releases/download/v2.7.0/MyVoiceSetup.exe';
+let betaTag='v2.7.0-beta.18';
 try{const beta=await (await fetch('updates/beta.json',{cache:'no-cache'})).json();if(/^v\d+\.\d+\.\d+-beta\.[1-9]\d*$/.test(beta.tag)&&beta.channel==='beta')betaTag=beta.tag;}catch{}
 const betaVersion=betaTag.slice(1).split('-')[0];
 let config={},session=readSession(sessionStorage),recovery=false;
