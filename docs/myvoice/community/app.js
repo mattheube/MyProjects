@@ -1,10 +1,12 @@
 import {captureAuthCallback,startDiscord,finishDiscord,saveSession,readSession,refreshSession,username,passwordScore} from './auth.js';
 import {serviceError} from './service-errors.js';
+import {captureRecoveryError} from './account-recovery.js';
+const recoveryFailure=captureRecoveryError(location,history);
 const authCallback=captureAuthCallback(location,history);
 const root=document.querySelector('main');
 const repo='https://github.com/mattheube/MyProjects';
-const download=repo+'/releases/download/v2.7.0/MyVoiceSetup.exe';
-let betaTag='v2.7.0-beta.18';
+const download=repo+'/releases/download/v2.7.1/MyVoiceSetup.exe';
+let betaTag='v2.7.1-beta.1';
 try{const beta=await (await fetch('updates/beta.json',{cache:'no-cache'})).json();if(/^v\d+\.\d+\.\d+-beta\.[1-9]\d*$/.test(beta.tag)&&beta.channel==='beta')betaTag=beta.tag;}catch{}
 const betaVersion=betaTag.slice(1).split('-')[0];
 let config={},session=readSession(sessionStorage),recovery=false;
@@ -33,3 +35,5 @@ if(authCallback.legacy){recovery=authCallback.legacy.type==='recovery';setSessio
 if(authCallback.code||authCallback.error){try{setSession(await finishDiscord(config,authCallback,sessionStorage));toast('Connecté avec Discord.');}catch(error){toast(error.message);}}
 window.addEventListener('hashchange',route);await route();
 
+
+if(recoveryFailure)toast(recoveryFailure);

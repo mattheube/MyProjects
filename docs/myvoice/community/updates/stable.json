@@ -1,12 +1,12 @@
 {
-  "releaseUrl": "https://github.com/mattheube/MyVoice/releases/tag/v2.7.0",
-  "tag": "v2.7.0",
-  "downloadUrl": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0/MyVoiceSetup.exe",
-  "packageSha256": "602B971444CEBE17A927A2CD0D6A7F35FA0E411AA53C9C4311FB17F860D49B9D",
-  "channel": "stable",
-  "sha256": "17921F81CEC602FE8F5E0FEB9825B28D7ACAB7B235396665155A32DED5EAF4D4",
-  "packageUrl": "https://github.com/mattheube/MyVoice/releases/download/v2.7.0/MyVoice-2.7.0-win-x64.zip",
-  "version": "2.7.0",
   "minimumVersion": "2.0.0",
+  "version": "2.7.1",
+  "packageSha256": "625042FF3D56160D8A2C743DCC1F56E5A8ACD1CF192561DB5876198E3F95344D",
+  "tag": "v2.7.1",
+  "channel": "stable",
+  "sha256": "E79B45FBD8619285712A4F35621DB77FAE3EB15A61311212E52D58FFD5B4D7A2",
+  "releaseUrl": "https://github.com/mattheube/MyVoice/releases/tag/v2.7.1",
+  "downloadUrl": "https://github.com/mattheube/MyVoice/releases/download/v2.7.1/MyVoiceSetup.exe",
+  "packageUrl": "https://github.com/mattheube/MyVoice/releases/download/v2.7.1/MyVoice-2.7.1-win-x64.zip",
   "mandatory": false
 }
