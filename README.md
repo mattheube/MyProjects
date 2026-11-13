@@ -4,9 +4,9 @@ Les applications de Mattheube.
 
 - **MyVoice** — studio audio et transformation vocale sur Windows.
 - **MyOpti** — réglages Windows, bibliothèque de jeux et entretien du PC.
-- **MyChat 1.3.1** — personnages, groupes, appels locaux et Studio Images sur Windows.
+- **MyChat 1.3.2** — personnages, groupes, appels locaux et Studio Images sur Windows.
 
-[**Télécharger MyChat pour Windows (.exe)**](https://github.com/mattheube/MyProjects/releases/download/mychat-v1.3.1/MyChat-1.3.1-Setup-x64.exe) · [Détails de la version](https://github.com/mattheube/MyProjects/releases/tag/mychat-v1.3.1)
+[**Télécharger MyChat pour Windows (.exe)**](https://github.com/mattheube/MyProjects/releases/download/mychat-v1.3.2/MyChat-1.3.2-Setup-x64.exe) · [Détails de la version](https://github.com/mattheube/MyProjects/releases/tag/mychat-v1.3.2)
 
 MyChat se met à jour au démarrage. Les personnages, personas et conversations sont conservés. Un compte MyProject est nécessaire ; les moteurs IA fonctionnent sur le PC. Lors de la première installation, environ 14 Go de modèles sont téléchargés séparément. Les tarifs présentés sont indicatifs et aucun paiement n’est activé.
 
