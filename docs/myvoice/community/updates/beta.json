@@ -1,12 +1,12 @@
 {
+  "packageSha256": "27C17E0E5E0D7F24F4942530E275702286F87CF91CD6F78170707486DAA4DCEF",
+  "channel": "beta",
+  "downloadUrl": "https://github.com/mattheube/MyVoice/releases/download/v2.8.0-beta.1/MyVoiceSetup.exe",
+  "sha256": "7E6EEB931D85FE7400B15A824B655211C1C35F932B07429659D355B5A037A934",
+  "tag": "v2.8.0-beta.1",
+  "releaseUrl": "https://github.com/mattheube/MyVoice/releases/tag/v2.8.0-beta.1",
   "mandatory": false,
   "minimumVersion": "2.0.0",
-  "version": "2.9.0",
-  "sha256": "F66E3125E9381033542BF5DACAEDC17FDB229C766548BEBBAF75BF281CA5ABE0",
-  "tag": "v2.9.0-beta.1",
-  "packageUrl": "https://github.com/mattheube/MyVoice/releases/download/v2.9.0-beta.1/MyVoice-2.9.0-win-x64.zip",
-  "channel": "beta",
-  "packageSha256": "F38ED355698F0695352928198BEE9EF5F2DE7AAD3264BB1350C6B40AE2F68774",
-  "releaseUrl": "https://github.com/mattheube/MyVoice/releases/tag/v2.9.0-beta.1",
-  "downloadUrl": "https://github.com/mattheube/MyVoice/releases/download/v2.9.0-beta.1/MyVoiceSetup.exe"
+  "packageUrl": "https://github.com/mattheube/MyVoice/releases/download/v2.8.0-beta.1/MyVoice-2.8.0-win-x64.zip",
+  "version": "2.8.0"
 }
